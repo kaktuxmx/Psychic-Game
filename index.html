@@ -39,20 +39,25 @@
 		var playerkey = event.key;
 		console.log(playerkey);
 
-
+	// TRYINT TO ADD THE FUNCTION TO RESTART A GAME.... I NEED A LITTLE MORE WORK ON THIS... 
+	function restartgame(){
 	// Here We do the If Else statement
 	if ( playerkey === gameletterpick) {
 		Wins++;
-		guessesleft = 9;}
+		guessesleft = 9;
+		restartgame()}
 
 	else if ( playerkey !== gameletterpick){
 			guessesleft--;}
 
 	if (guessesleft === 0){
 		losses++;
-		guessesleft=9;
+		guessesleft=9
+		restartgame();
 		}
-	
+	}
+
+	restartgame();
 	//To do the string to save the words type
 	playerguesses[playerguesses.length] = playerkey;
 
