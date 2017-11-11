@@ -35,17 +35,16 @@
 
 	//With this i am saving the click from the player
 	document.onkeyup = function(event){
-		var playerkey = event.key};
+		var playerkey = event.key;
 		console.log(playerkey);
 
 
-
 	// Here We do the If Else statement
-	if ( playerkey = gameletterpick) {
+	if ( playerkey === gameletterpick) {
 		Wins++;
 		guessesleft = 9;}
 
-	else if ( playerkey != gameletterpick){
+	else if ( playerkey !== gameletterpick){
 			guessesleft--;}
 
 	if (guessesleft === 0){
@@ -62,7 +61,7 @@
 	document.getElementById("guessesleft").innerHTML = guessesleft;
 	document.getElementById("guessesfar").innerHTML = playerguesses;
 
-
+}
 	//Wanted to included a reset, but could not
 
 </script>
