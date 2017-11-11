@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Psychic Game MX</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	</head>
+<body>
+<div class="jumbotron">
+  <h1>Welcome to the Psychic Game MX</h1>
+  <p>Try to guess what letter is the one the system is thinking ...</p>
+  <p class="Wins">Wins:</a></p>
+  <p class="losses">Losses:<p>
+  <p class="guessesleft">Guesses left:</p>
+  <p class="guessesfar">Your Guesses so far:</p>
+</div>
+
+<script type="text/javascript">
+
+	// This is to list the array for the alphabet
+	var alphavars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+	// this are the general variables to keep wins, losses, and counts
+	var Wins= 0;
+	var losses = 0;
+	var guessesleft = 9;
+
+	// variable to keep what the player is pushing
+	var playerkey = null;
+
+	// PC will select what letter to be guessed
+	var gameletterpick = alphavars[Math.floor(Math.random() * alphavars.length)];
+	// Consolo.log to see what is the letter to be pick, just because I can
+		console.log(gameletterpick);
+
+	//With this i am saving the click from the player
+	document.onkeyup = function(event){
+		var playerkey = event.key};
+		console.log(playerkey);
+
+
+
+	// Here We do the If Else statement
+	if ( playerkey = gameletterpick) {
+		Wins++;
+		guessesleft = 9;}
+
+	else if ( playerkey != gameletterpick){
+			guessesleft--;}
+
+	if (guessesleft === 0){
+		losses++;
+		guessesleft=9;
+		}
+	
+	
+
+
+
+
+</script>
+</body>
+</html>
